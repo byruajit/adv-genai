@@ -35,6 +35,20 @@ In `.env`, put `#` in front of the three Groq lines and remove `#` from the thre
 
 ---
 
+## Session 9b — How LLMs work: tokens, cost, the context window, embeddings
+
+| # | Step | Command |
+|---|---|---|
+| 1 | Get today's files (in the `adv-genai` folder, VS Code terminal) | `git pull` · `uv sync` |
+| 2 | Optional, for the embeddings section (Ollama running) | `ollama pull nomic-embed-text` (about 270 MB) — without it the notebook uses the cached vectors in the repo |
+| 3 | Pre-read (10 minutes) | `module01/reading_tokens.md` |
+| 4 | Lab | `uv run jupyter lab module01/s09b_tokens.ipynb` |
+| 5 | **Checkpoint** | `uv run pytest tests/test_s09b.py -rs` → `5 passed` (a skipped test is not a pass: `-rs` says why) |
+
+The first time the notebook counts tokens, `tiktoken` downloads its dictionary file (about 3 MB) once; after that it works offline.
+
+---
+
 ## Git and your work repository
 
 Today Git is one command: `git clone`. Commits, branches and pushing are covered by the Git & GitHub webinar — watch it before **Session 14**, when you create your own work repository **`adv-genai-work`** next to this one in `Documents` and start submitting from it. Never put one repository inside the other, and never push your own work to this one.
@@ -68,10 +82,16 @@ hello.py                          Session 9a first call
 list_models.py                    which models your key can use
 tests/test_setup.py               Session 9a checkpoint (3 tests)
 tests/test_s09a.py                checks the Session 9a notebook (offline, 6 tests)
+tests/test_s09b.py                Session 9b checkpoint (5 tests)
 module01/s09a_first_call.ipynb    Session 9a notebook: hello.py rebuilt cell by cell
 module01/terms_s09a.md            every new term from Session 9a, and where it comes back
+module01/s09b_tokens.ipynb        Session 9b notebook: tokens, usage, cost, context window, embeddings
+module01/tokens_utils.py          Session 9b helpers (count_tokens, cost_inr, wrapper_size, nearest ...)
+module01/embeddings_10words.json  cached nomic-embed-text vectors for the ten words (no Ollama needed)
+module01/reading_tokens.md        Session 9b pre-read
+module01/terms_s09b.md            every new term from Session 9b, and where it comes back
 cheatsheet/python-for-agents.md   the six Python patterns agents use
-sessions/S09a/                    Session 9a slides, instructor pack and setup guide
+sessions/S09a/ · sessions/S09b/    session slides and instructor packs (S09a also has the setup guide)
 .env.example                      copy to .env
 pyproject.toml + uv.lock          pinned dependencies (uv sync)
 ```
