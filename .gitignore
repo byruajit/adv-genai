@@ -1,0 +1,13 @@
+# secrets — never committed
+.env
+# environment and caches (uv sync recreates them)
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+# editor / OS
+.vscode/
+.DS_Store
+# Office lock files created while a deck or document is open
+~$*
