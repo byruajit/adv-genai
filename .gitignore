@@ -11,3 +11,8 @@ __pycache__/
 .DS_Store
 # Office lock files created while a deck or document is open
 ~$*
+# instructor-only material (decks, instructor packs) — kept on the instructor's machine, never pushed
+instructor/
+sessions/
+*.pptx
+*Instructor_Pack*

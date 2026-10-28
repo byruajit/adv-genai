@@ -91,7 +91,7 @@ module01/embeddings_10words.json  cached nomic-embed-text vectors for the ten wo
 module01/reading_tokens.md        Session 9b pre-read
 module01/terms_s09b.md            every new term from Session 9b, and where it comes back
 cheatsheet/python-for-agents.md   the six Python patterns agents use
-sessions/S09a/ · sessions/S09b/    session slides and instructor packs (S09a also has the setup guide)
+guides/Environment_Setup_Guide.docx  step-by-step setup guide with every fix (Session 9a)
 .env.example                      copy to .env
 pyproject.toml + uv.lock          pinned dependencies (uv sync)
 ```
