@@ -63,6 +63,20 @@ Mac / Linux: `cp starters/s03_clean_text.py mywork/clean_text.py`.
 
 ---
 
+## Session 4 — Python essentials II: decide loan eligibility
+
+| # | Step | Command |
+|---|---|---|
+| 1 | Get today's files (in the `adv-genai` folder) | `git pull` |
+| 2 | Copy the starter into your work repository | `copy starters\s04_loan_rules.py mywork\loan_rules.py` |
+| 3 | Fill in the five function bodies in `mywork\loan_rules.py` — Copilot off, names unchanged | `code mywork\loan_rules.py` |
+| 4 | **Checkpoint** (from the `adv-genai` folder) | `uv run pytest tests/test_s04.py` → `8 passed` |
+| 5 | See it work, then save your work | `uv run python mywork\loan_rules.py` · in `mywork`: `git add loan_rules.py` · `git commit -m "Add loan eligibility rules"` · `git push` |
+
+Mac / Linux: `cp starters/s04_loan_rules.py mywork/loan_rules.py`.
+
+---
+
 ## Git and your work repository (`mywork`)
 
 You use two repositories, in two directions:
@@ -117,6 +131,8 @@ list_models.py                    which models your key can use
 tests/test_setup.py               Session 9a checkpoint (3 tests)
 tests/test_s03.py                 Session 3 checkpoint: reads mywork/clean_text.py (8 tests)
 starters/s03_clean_text.py        Session 3 starter: copy to mywork/clean_text.py
+tests/test_s04.py                 Session 4 checkpoint: reads mywork/loan_rules.py (8 tests)
+starters/s04_loan_rules.py        Session 4 starter: copy to mywork/loan_rules.py
 tests/test_s09a.py                checks the Session 9a notebook (offline, 6 tests)
 tests/test_s09b.py                Session 9b checkpoint (5 tests)
 module01/s09a_first_call.ipynb    Session 9a notebook: hello.py rebuilt cell by cell
